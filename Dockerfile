@@ -38,6 +38,6 @@ RUN pip3 install --upgrade pip
 RUN pip3 install --upgrade multiprocess psutil jupyter pycrypto matplotlib pandas dateparser
 
 RUN mkdir /root/BlockSci/external/bitcoin-api-cpp/release
-WORKDIR mkdir /root/BlockSci/external/bitcoin-api-cpp/release
+WORKDIR /root/BlockSci/external/bitcoin-api-cpp/release
 RUN cmake -DCMAKE_BUILD_TYPE=Release ..
 RUN make install
